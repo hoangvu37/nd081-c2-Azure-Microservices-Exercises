@@ -9,7 +9,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     id = req.params.get('id')
     if id:
         try:
-            url = os.environ["MyDbConnection"] # Change the Variable name, as applicable to you
+            url = os.environ["mongodb://accountcosmosdb:Kuj04lzIxn2I0juXT9kVbDCI33WXDET0cbWFcBkUNe7bCBu9z6DuK4Sg9GdudJnyB3yxwZFxRz9yujqmyeKUjw==@accountcosmosdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@accountcosmosdb@"] # Change the Variable name, as applicable to you
             client = pymongo.MongoClient(url)
             database = client['lab2db'] # Change the MongoDB name
             collection = database['notes']    # Change the collection name
